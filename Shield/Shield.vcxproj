@@ -50,6 +50,13 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>../../BWAPI/lib/BWAPId.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy "$(TargetDir)Shield.dll" "C:\Program Files (x86)\StarCraft\bwapi-data\AI" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -67,6 +74,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>../../BWAPI/lib/BWAPI.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <PostBuildEvent>
+      <Command>xcopy "$(TargetDir)Shield.dll" "C:\Program Files (x86)\StarCraft\bwapi-data\AI" /Y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\DllEntryPoint.cpp" />
