@@ -3,6 +3,9 @@
 *.suo
 *.user
 
+*/Release
+*/Debug
+
 
 # Compiled Object files
 *.slo
